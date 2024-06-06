@@ -1,5 +1,5 @@
-$folders = @("Lucas2", "Adholpho2", "Gabriel2")
-$site = "https://mpbeng.sharepoint.com"
+$folders = @("pasta1", "pasta2", "pasta3")
+$site = "https://seu-dominio.sharepoint.com"
 $sites = ""
 $projeto = ""
 
@@ -43,7 +43,7 @@ finally {
   Connect-PnPOnline -Url $site -Interactive
   Write-Host "OK!"
 }
-$urlProjeto = "https://mpbeng.sharepoint.com/sites/" + $projeto
+$urlProjeto = "https://seu-dominio.sharepoint.com/sites/" + $projeto
 $sites = Get-PnPTenantSite
 $site = ($sites | Where-Object { $_.Url -eq $urlProjeto }).Url
 
