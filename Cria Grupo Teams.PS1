@@ -3,6 +3,15 @@ $site = "https://seu-dominio.sharepoint.com"
 $sites = ""
 $projeto = ""
 
+function Remove-CaracterEspecial {
+  param (
+    [string]$Entrada
+  )
+  # Substitui todos os caracteres que não são letras, números ou espaços por uma string vazia
+  $Refatorado = $Entrada -replace '[^a-zA-Z0-9\s]', ''
+  return $Refatorado -replace '\s+', ''
+}
+
 #Importando Teams
 try {
   Write-Host "Importando o modulo Teams"
@@ -22,6 +31,7 @@ finally {
 
 while ($projeto -eq "") {
   $projeto = Read-Host -Prompt "Digite o nome do projeto"
+  $projeto = Remove-CaracterEspecial -Entrada $projeto
   Write-Host "Ok!"
 }
 
