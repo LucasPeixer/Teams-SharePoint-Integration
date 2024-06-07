@@ -10,7 +10,7 @@ Este repositório contém um script em PowerShell que automatiza a criação de 
 
 ## Requisitos
 
-- PowerShell 5.1 ou superior.
+- PowerShell 7.2 ou superior.
 - Módulo MicrosoftTeams.
 - Módulo PnP.PowerShell.
 - Permissões administrativas no Teams e SharePoint.
